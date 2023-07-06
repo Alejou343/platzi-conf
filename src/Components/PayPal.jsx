@@ -10,7 +10,7 @@ const PayPalButton = () => {
     const { cart } = state;
 
     return (
-        <PayPalScriptProvider options={{ "client-id": String(process.env.CLIENT_ID) }}>
+        <PayPalScriptProvider options={{ "clientId": String(process.env.CLIENT_ID) }}>
         <PayPalButtons
             createOrder={(data, actions) => {
             return actions.order.create({
