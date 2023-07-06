@@ -2,6 +2,7 @@ import React from 'react';
 import AppContext from '../Context/AppContext';
 import '../Styles/Payment.css';
 import PayPalButton from '../Components/PayPal';
+import { Helmet } from 'react-helmet';
 
 const Payment = () => {
 
@@ -9,6 +10,10 @@ const Payment = () => {
     const { cart } = state;
 
     return (
+    <>
+        <Helmet>
+            <title>Payment - PCM</title>
+        </Helmet>
         <div className="Payment">
             <div className="Payment-content">
                 <h3>Resumen del pedido:</h3>
@@ -29,6 +34,7 @@ const Payment = () => {
                 </div>
             </div>
         </div>
+    </>
     );
 }
 
